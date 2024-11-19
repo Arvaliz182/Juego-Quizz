@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>QUIZZ</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Añadir MathJax para renderizar expresiones matemáticas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div id="inicio">
+        <h1>QUIZZ</h1>
+        <button onclick="iniciarJuego()">Comenzar Juego</button>
+        <button onclick="mostrarInstrucciones()">Instrucciones</button>
+    </div>
+
+    <div id="juego" style="display: none;">
+        <h2 id="tituloTema"></h2>
+        <div id="contenidoPregunta"></div>
+        <div id="retroalimentacion"></div>
+        <button id="btnSiguiente" onclick="siguientePregunta()" style="display: none;">Siguiente</button>
+    </div>
+
+    <div id="resultado" style="display: none;">
+        <h2>Resultados</h2>
+        <p id="puntajeFinal"></p>
+        <button onclick="reiniciarJuego()">Reiniciar Juego</button>
+        <button onclick="mostrarRecursos()">Recursos Adicionales</button>
+    </div>
+
+    <script src="juego.js"></script>
+</body>
+</html>
