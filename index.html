@@ -15,6 +15,37 @@
         <h1>QUIZZ</h1>
         <button onclick="iniciarJuego()">Comenzar Juego</button>
         <button onclick="mostrarInstrucciones()">Instrucciones</button>
+        <button onclick="mostrarRecursos()">Recursos</button>
+
+        <!-- Sección de Instrucciones -->
+        <div id="instrucciones" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="ocultarInstrucciones()">&times;</span>
+                <h2>Instrucciones</h2>
+                <ul>
+                    <li>Responde 20 preguntas seleccionadas aleatoriamente de un total de 50.</li>
+                    <li>Las opciones de respuesta se ordenan aleatoriamente cada vez.</li>
+                    <li>Si respondes más de 15 preguntas correctamente, obtendrás una pregunta bonus.</li>
+                    <li>Obtén retroalimentación inmediata después de cada respuesta.</li>
+                    <li>Al final, revisa tu puntaje y accede a recursos adicionales.</li>
+                    <li>Utiliza los botones "Reiniciar Nivel" para volver a empezar y "Regresar Nivel" para volver al menú principal en cualquier momento.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección de Recursos -->
+        <div id="recursos" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="ocultarRecursos()">&times;</span>
+                <h2>Recursos</h2>
+                <p>
+                    Puedes acceder a los recursos en el siguiente enlace:
+                    <a href="https://sites.google.com/pcpuma.acatlan.unam.mx/proyecto-final/p%C3%A1gina-principal?authuser=0" target="_blank">
+                        Recursos del Proyecto
+                    </a>
+                </p>
+            </div>
+        </div>
     </div>
 
     <div id="juego" style="display: none;">
@@ -22,13 +53,17 @@
         <div id="contenidoPregunta"></div>
         <div id="retroalimentacion"></div>
         <button id="btnSiguiente" onclick="siguientePregunta()" style="display: none;">Siguiente</button>
+        <div class="botones-juego">
+            <button onclick="reiniciarNivel()">Reiniciar Nivel</button>
+            <button onclick="regresarNivel()">Regresar Nivel</button>
+        </div>
     </div>
 
     <div id="resultado" style="display: none;">
         <h2>Resultados</h2>
         <p id="puntajeFinal"></p>
         <button onclick="reiniciarJuego()">Reiniciar Juego</button>
-        <button onclick="mostrarRecursos()">Recursos Adicionales</button>
+        <button onclick="regresarNivel()">Regresar Nivel</button>
     </div>
 
     <script src="juego.js"></script>

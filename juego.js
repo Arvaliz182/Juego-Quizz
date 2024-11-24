@@ -1,3 +1,4 @@
+// Lista de temas
 let temas = [
     "Conceptos fundamentales",
     "Teoremas importantes",
@@ -11,7 +12,7 @@ let temas = [
     "Polinomios y raíces"
 ];
 
-// Aquí está el conjunto completo de 50 preguntas
+// Lista de todas las preguntas
 let todasLasPreguntas = [
     // 1
     {
@@ -25,7 +26,7 @@ let todasLasPreguntas = [
             "No, porque la función no es continua en \\( x = 0 \\)."
         ],
         respuestaCorrecta: 1,
-        explicacion: "La función \\( f(x) = |x| \\) no es derivable en \\( x = 0 \\) porque las derivadas laterales no coinciden."
+        explicacion: "Aunque \\( f(x) = |x| \\) es continua en \\( x = 0 \\), no es derivable en ese punto porque las derivadas laterales no coinciden. La derivada por la izquierda es \\( -1 \\) y por la derecha es \\( 1 \\), lo que significa que no existe una derivada única en \\( x = 0 \\)."
     },
     // 2
     {
@@ -39,7 +40,7 @@ let todasLasPreguntas = [
             "\\( f \\) tiene un punto crítico en \\( a \\)."
         ],
         respuestaCorrecta: 1,
-        explicacion: "La derivabilidad implica continuidad; si \\( f \\) es derivable en \\( a \\), entonces es continua en ese punto."
+        explicacion: "La derivabilidad en un punto \\( a \\) implica que \\( f \\) es continua en ese punto. Si una función es derivable en \\( a \\), necesariamente debe ser continua allí."
     },
     // 3
     {
@@ -53,7 +54,7 @@ let todasLasPreguntas = [
             "La pendiente de la recta secante entre \\( a \\) y \\( b \\)."
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada en \\( a \\) es el límite del cociente incremental cuando \\( h \\to 0 \\)."
+        explicacion: "La derivada en \\( a \\) es el límite del cociente incremental cuando \\( h \\to 0 \\), es decir, \\( f'(a) = \\lim_{h \\to 0} \\dfrac{f(a+h) - f(a)}{h} \\). Esto representa la pendiente de la recta tangente a la curva en \\( x = a \\)."
     },
     // 4
     {
@@ -67,7 +68,7 @@ let todasLasPreguntas = [
             "\\( f \\) es derivable en todos los puntos cercanos a \\( a \\)."
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivabilidad en \\( a \\) requiere que el límite del cociente incremental exista en ese punto."
+        explicacion: "Para que \\( f \\) sea derivable en \\( a \\), debe existir el límite del cociente incremental en ese punto. Esto significa que la pendiente de la recta tangente está bien definida en \\( x = a \\)."
     },
     // 5
     {
@@ -81,7 +82,7 @@ let todasLasPreguntas = [
             "\\( g'(f(a)) \\)"
         ],
         respuestaCorrecta: 1,
-        explicacion: "La regla de la cadena establece que \\( (g \\circ f)'(a) = f'(a) g'(f(a)) \\)."
+        explicacion: "Según la regla de la cadena, la derivada de la composición \\( (g \\circ f)(x) \\) es \\( (g \\circ f)'(a) = f'(a) \\cdot g'(f(a)) \\). Esto significa que multiplicamos la derivada de \\( f \\) en \\( a \\) por la derivada de \\( g \\) evaluada en \\( f(a) \\)."
     },
     // 6
     {
@@ -95,7 +96,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = x^{n-1} \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La regla de potencia establece que \\( \\dfrac{d}{dx} x^n = n x^{n-1} \\)."
+        explicacion: "Aplicando la regla de potencia, la derivada de \\( x^n \\) es \\( f'(x) = n x^{n-1} \\). Esto es fundamental en el cálculo diferencial."
     },
     // 7
     {
@@ -109,7 +110,7 @@ let todasLasPreguntas = [
             "Solo si la función es constante."
         ],
         respuestaCorrecta: 1,
-        explicacion: "Existen funciones continuas que no son derivables en ciertos puntos, como \\( f(x) = |x| \\) en \\( x = 0 \\)."
+        explicacion: "No todas las funciones continuas son derivables. Un ejemplo es \\( f(x) = |x| \\), que es continua en todos los puntos pero no es derivable en \\( x = 0 \\). La continuidad no garantiza la derivabilidad."
     },
     // 8
     {
@@ -123,7 +124,7 @@ let todasLasPreguntas = [
             "No existe la derivada."
         ],
         respuestaCorrecta: 1,
-        explicacion: "Para \\( x > 0 \\), \\( |x| = x \\), entonces \\( f'(x) = 1 \\)."
+        explicacion: "Para \\( x > 0 \\), \\( f(x) = x \\), por lo que la derivada es \\( f'(x) = 1 \\). Esto representa la pendiente constante de la función en ese intervalo."
     },
     // 9
     {
@@ -137,7 +138,7 @@ let todasLasPreguntas = [
             "\\( f \\) tiene un mínimo en \\( b \\)."
         ],
         respuestaCorrecta: 1,
-        explicacion: "El Teorema de Rolle garantiza la existencia de un punto donde la derivada es cero."
+        explicacion: "El Teorema de Rolle garantiza que bajo esas condiciones, existe al menos un punto \\( c \\) en \\( (a,b) \\) donde la derivada es cero, es decir, donde la tangente es horizontal."
     },
     // 10
     {
@@ -151,7 +152,7 @@ let todasLasPreguntas = [
             "\\( f(c) = f(a) \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "El Teorema del Valor Medio relaciona la derivada con la tasa de cambio promedio."
+        explicacion: "El Teorema del Valor Medio indica que existe un punto \\( c \\) donde la derivada instantánea \\( f'(c) \\) es igual a la tasa de cambio promedio entre \\( a \\) y \\( b \\)."
     },
     // 11
     {
@@ -165,7 +166,7 @@ let todasLasPreguntas = [
             "No se puede concluir nada."
         ],
         respuestaCorrecta: 0,
-        explicacion: "Si la derivada es cero en todo el intervalo, la función es constante allí."
+        explicacion: "Si la derivada de \\( f \\) es cero en todo el intervalo, significa que la función no cambia de valor allí; por lo tanto, \\( f \\) es constante en ese intervalo."
     },
     // 12
     {
@@ -179,7 +180,7 @@ let todasLasPreguntas = [
             "\\( f \\) tiene un máximo en el intervalo."
         ],
         respuestaCorrecta: 2,
-        explicacion: "Una derivada positiva implica que la función es estrictamente creciente en el intervalo."
+        explicacion: "Una derivada positiva indica que la función está aumentando; es decir, \\( f \\) es estrictamente creciente en el intervalo dado."
     },
     // 13
     {
@@ -193,7 +194,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = -\\sen(x) \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada del seno es el coseno: \\( \\dfrac{d}{dx} \\sen(x) = \\cos(x) \\)."
+        explicacion: "La derivada del seno es el coseno: \\( \\dfrac{d}{dx} \\sen(x) = \\cos(x) \\). Esta es una identidad fundamental en cálculo."
     },
     // 14
     {
@@ -221,7 +222,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = \\sqrt{1 - x^2} \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada de \\( \\arcsen(x) \\) es \\( \\dfrac{1}{\\sqrt{1 - x^2}} \\)."
+        explicacion: "La derivada de \\( \\arcsen(x) \\) es \\( \\dfrac{1}{\\sqrt{1 - x^2}} \\). Esto es válido para \\( -1 < x < 1 \\)."
     },
     // 16
     {
@@ -235,7 +236,7 @@ let todasLasPreguntas = [
             "Alcanza su máximo en \\( t = \\dfrac{1}{2} \\)."
         ],
         respuestaCorrecta: 0,
-        explicacion: "Como el intervalo es \\( [0,1) \\), el valor 1 no está incluido y, por lo tanto, no alcanza su máximo."
+        explicacion: "El intervalo \\( [0,1) \\) incluye 0 pero no 1. Aunque \\( f(t) \\) se acerca a 1, nunca alcanza ese valor en el intervalo, por lo que no alcanza su máximo."
     },
     // 17
     {
@@ -249,7 +250,7 @@ let todasLasPreguntas = [
             "La función no es derivable en \\( a \\)."
         ],
         respuestaCorrecta: 1,
-        explicacion: "La existencia de este límite implica que \\( f \\) es derivable en \\( a \\)."
+        explicacion: "La existencia de este límite indica que la derivada de \\( f \\) en \\( a \\) existe y es igual a ese límite, es decir, \\( f \\) es derivable en \\( a \\)."
     },
     // 18
     {
@@ -263,7 +264,7 @@ let todasLasPreguntas = [
             "No se puede concluir nada."
         ],
         respuestaCorrecta: 1,
-        explicacion: "Una derivada cero en todo el intervalo implica que \\( f \\) es constante allí."
+        explicacion: "Una derivada cero en todo el intervalo implica que la función no cambia; por lo tanto, \\( f \\) es constante en ese intervalo."
     },
     // 19
     {
@@ -277,7 +278,7 @@ let todasLasPreguntas = [
             "\\( f(x) < f(y) \\) para todo \\( x < y \\) en \\( A \\)."
         ],
         respuestaCorrecta: 3,
-        explicacion: "Una función es estrictamente creciente si \\( x < y \\) implica \\( f(x) < f(y) \\)."
+        explicacion: "Una función es estrictamente creciente si, para cualquier \\( x < y \\) en \\( A \\), se cumple que \\( f(x) < f(y) \\). Esto significa que \\( f \\) aumenta continuamente sin valores iguales."
     },
     // 20
     {
@@ -291,7 +292,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = \\dfrac{1}{x^2} \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada del logaritmo natural es \\( \\dfrac{d}{dx} \\ln(x) = \\dfrac{1}{x} \\)."
+        explicacion: "La derivada del logaritmo natural es \\( \\dfrac{d}{dx} \\ln(x) = \\dfrac{1}{x} \\), válida para \\( x > 0 \\)."
     },
     // 21
     {
@@ -305,7 +306,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = \\dfrac{1}{1 + x^2} \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada de \\( \\arccos(x) \\) es \\( f'(x) = -\\dfrac{1}{\\sqrt{1 - x^2}} \\)."
+        explicacion: "La derivada de \\( \\arccos(x) \\) es \\( -\\dfrac{1}{\\sqrt{1 - x^2}} \\), definida para \\( -1 < x < 1 \\)."
     },
     // 22
     {
@@ -319,7 +320,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = -\\sec^2(x) \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada de \\( \\tan(x) \\) es \\( f'(x) = \\sec^2(x) \\)."
+        explicacion: "La derivada de la tangente es \\( \\dfrac{d}{dx} \\tan(x) = \\sec^2(x) \\)."
     },
     // 23
     {
@@ -333,7 +334,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = \\sec^2(x) \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada de \\( \\cot(x) \\) es \\( f'(x) = -\\csc^2(x) \\)."
+        explicacion: "La derivada de la cotangente es \\( \\dfrac{d}{dx} \\cot(x) = -\\csc^2(x) \\)."
     },
     // 24
     {
@@ -347,7 +348,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = -\\dfrac{1}{\\sqrt{1 - x^2}} \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada de \\( \\arctan(x) \\) es \\( f'(x) = \\dfrac{1}{1 + x^2} \\)."
+        explicacion: "La derivada de \\( \\arctan(x) \\) es \\( \\dfrac{1}{1 + x^2} \\), válida para todos los números reales."
     },
     // 25
     {
@@ -361,7 +362,7 @@ let todasLasPreguntas = [
             "La función es continua en \\( x = a \\)."
         ],
         respuestaCorrecta: 0,
-        explicacion: "Una función no puede ser derivable en un punto de discontinuidad."
+        explicacion: "La derivabilidad requiere continuidad. Si hay una discontinuidad en \\( x = a \\), la función no puede ser derivable en ese punto."
     },
     // 26
     {
@@ -375,7 +376,7 @@ let todasLasPreguntas = [
             "Determinar concavidad de la función."
         ],
         respuestaCorrecta: 0,
-        explicacion: "La primera derivada indica dónde la función crece o decrece."
+        explicacion: "El criterio de la primera derivada analiza el signo de \\( f'(x) \\) para determinar dónde la función crece (\\( f'(x) > 0 \\)) o decrece (\\( f'(x) < 0 \\))."
     },
     // 27
     {
@@ -389,7 +390,7 @@ let todasLasPreguntas = [
             "Determinar continuidad de la función."
         ],
         respuestaCorrecta: 0,
-        explicacion: "La segunda derivada nos indica la concavidad y posibles puntos de inflexión."
+        explicacion: "El criterio de la segunda derivada utiliza \\( f''(x) \\) para analizar la concavidad de la función y localizar puntos de inflexión donde la concavidad cambia."
     },
     // 28
     {
@@ -403,7 +404,7 @@ let todasLasPreguntas = [
             "Depende de los coeficientes."
         ],
         respuestaCorrecta: 0,
-        explicacion: "Un polinomio de grado \\( n \\) tiene a lo sumo \\( n \\) raíces reales."
+        explicacion: "Según el Teorema Fundamental del Álgebra, un polinomio de grado \\( n \\) tiene exactamente \\( n \\) raíces (reales o complejas). El número máximo de raíces reales es \\( n \\)."
     },
     // 29
     {
@@ -417,7 +418,7 @@ let todasLasPreguntas = [
             "Un máximo o mínimo absoluto."
         ],
         respuestaCorrecta: 0,
-        explicacion: "El Teorema de Rolle implica que la derivada se anula entre dos raíces consecutivas."
+        explicacion: "El Teorema de Rolle indica que si una función toma el mismo valor en dos puntos y es derivable entre ellos, entonces su derivada se anula en al menos un punto intermedio."
     },
     // 30
     {
@@ -431,7 +432,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = -\\dfrac{1}{|x|} \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada de \\( \\ln|x| \\) es \\( \\dfrac{1}{x} \\) para \\( x \\neq 0 \\)."
+        explicacion: "La derivada de \\( \\ln|x| \\) es \\( \\dfrac{1}{x} \\) para \\( x \\neq 0 \\), ya que se considera el signo de \\( x \\)."
     },
     // 31
     {
@@ -441,11 +442,11 @@ let todasLasPreguntas = [
         opciones: [
             "\\( f \\) es creciente.",
             "\\( f \\) es decreciente.",
-            "\\( f \\) tiene un máximo en el intervalo.",
+            "\\( f \\) tiene un máximo absoluto.",
             "\\( f \\) es constante."
         ],
         respuestaCorrecta: 1,
-        explicacion: "Una derivada negativa implica que la función es decreciente en el intervalo."
+        explicacion: "Una derivada negativa indica que la función está disminuyendo; es decir, \\( f \\) es decreciente en el intervalo."
     },
     // 32
     {
@@ -459,7 +460,7 @@ let todasLasPreguntas = [
             "La función es discontinua."
         ],
         respuestaCorrecta: 0,
-        explicacion: "En un punto de inflexión, la función cambia de concavidad."
+        explicacion: "En un punto de inflexión, la función cambia de concavidad de cóncava hacia arriba a cóncava hacia abajo o viceversa."
     },
     // 33
     {
@@ -473,7 +474,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = \\tan(x) \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada de \\( \\sec(x) \\) es \\( \\sec(x) \\tan(x) \\)."
+        explicacion: "La derivada de la secante es \\( \\dfrac{d}{dx} \\sec(x) = \\sec(x) \\tan(x) \\)."
     },
     // 34
     {
@@ -487,21 +488,21 @@ let todasLasPreguntas = [
             "\\( f'(x) = \\tan(x) \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada de \\( \\csc(x) \\) es \\( -\\csc(x) \\cot(x) \\)."
+        explicacion: "La derivada de la cosecante es \\( \\dfrac{d}{dx} \\csc(x) = -\\csc(x) \\cot(x) \\)."
     },
     // 35
     {
         tema: "Aplicaciones de la derivada",
         tipo: "opcionMultiple",
-        pregunta: "Para encontrar los máximos y mínimos locales de una función, buscamos los puntos donde:",
+        pregunta: "Para encontrar los máximos y mínimos locales de una función, se busca:",
         opciones: [
-            "La derivada primera es cero o no existe.",
-            "La función es discontinua.",
-            "La segunda derivada es cero.",
-            "La función alcanza su valor máximo absoluto."
+            "Los puntos donde la derivada primera es cero o no existe.",
+            "Los puntos donde la función es discontinua.",
+            "Los puntos donde la segunda derivada es cero.",
+            "Los puntos donde la función alcanza su valor máximo absoluto."
         ],
         respuestaCorrecta: 0,
-        explicacion: "Los extremos locales ocurren en puntos críticos donde la derivada primera es cero o no existe."
+        explicacion: "Los máximos y mínimos locales ocurren en puntos críticos, donde \\( f'(x) = 0 \\) o \\( f'(x) \\) no existe. Estos puntos son candidatos a extremos locales."
     },
     // 36
     {
@@ -515,7 +516,7 @@ let todasLasPreguntas = [
             "\\( \\dfrac{dy}{dx} = \\ln(y) \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada de \\( e^{x} \\) es \\( e^{x} \\)."
+        explicacion: "La derivada de \\( y = e^{x} \\) con respecto a \\( x \\) es \\( \\dfrac{dy}{dx} = e^{x} \\), y dado que \\( y = e^{x} \\), podemos escribir \\( \\dfrac{dy}{dx} = y \\)."
     },
     // 37
     {
@@ -529,7 +530,7 @@ let todasLasPreguntas = [
             "No existe"
         ],
         respuestaCorrecta: 0,
-        explicacion: "Este es un límite notable que vale 1."
+        explicacion: "Este es un límite notable fundamental en cálculo, y su valor es 1."
     },
     // 38
     {
@@ -543,7 +544,7 @@ let todasLasPreguntas = [
             "No existe"
         ],
         respuestaCorrecta: 0,
-        explicacion: "A medida que \\( x \\to \\infty \\), \\( \\dfrac{1}{x} \\to 0 \\)."
+        explicacion: "A medida que \\( x \\) tiende a infinito, \\( \\dfrac{1}{x} \\) se acerca a 0."
     },
     // 39
     {
@@ -557,7 +558,7 @@ let todasLasPreguntas = [
             "No existe"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada de una constante siempre es cero."
+        explicacion: "La derivada de cualquier valor constante es cero, ya que las constantes no cambian con respecto a la variable."
     },
     // 40
     {
@@ -571,7 +572,7 @@ let todasLasPreguntas = [
             "Constante en ese intervalo."
         ],
         respuestaCorrecta: 0,
-        explicacion: "Una segunda derivada positiva indica concavidad hacia arriba."
+        explicacion: "Una segunda derivada positiva indica que la función es cóncava hacia arriba, es decir, su gráfica se curva hacia arriba."
     },
     // 41
     {
@@ -585,7 +586,7 @@ let todasLasPreguntas = [
             "Negativa en ese intervalo."
         ],
         respuestaCorrecta: 0,
-        explicacion: "Convexidad implica que la derivada primera es creciente."
+        explicacion: "Si una función es convexa (cóncava hacia arriba), su derivada primera es creciente en ese intervalo."
     },
     // 42
     {
@@ -599,7 +600,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = e^{k} \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada es \\( f'(x) = k e^{k x} \\)."
+        explicacion: "Aplicando la regla de la cadena, la derivada es \\( f'(x) = k e^{k x} \\)."
     },
     // 43
     {
@@ -613,7 +614,7 @@ let todasLasPreguntas = [
             "Punto crítico."
         ],
         respuestaCorrecta: 0,
-        explicacion: "Un cambio de signo en la segunda derivada indica un punto de inflexión."
+        explicacion: "Un punto de inflexión es donde la concavidad de la función cambia, es decir, donde la segunda derivada cambia de signo."
     },
     // 44
     {
@@ -627,7 +628,7 @@ let todasLasPreguntas = [
             "No existe"
         ],
         respuestaCorrecta: 0,
-        explicacion: "Este límite es conocido y vale 1."
+        explicacion: "Este límite es un resultado conocido y su valor es 1."
     },
     // 45
     {
@@ -641,7 +642,7 @@ let todasLasPreguntas = [
             "\\( \\sqrt{1 - x^2} \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "Es la derivada de \\( \\arcsen(x) \\)."
+        explicacion: "La derivada de \\( \\arcsen(x) \\) es \\( \\dfrac{1}{\\sqrt{1 - x^2}} \\)."
     },
     // 46
     {
@@ -655,7 +656,7 @@ let todasLasPreguntas = [
             "La derivada de \\( f \\) en \\( x = a \\) es cero."
         ],
         respuestaCorrecta: 0,
-        explicacion: "La discontinuidad impide la derivabilidad en ese punto."
+        explicacion: "La derivabilidad requiere continuidad en el punto. Si \\( f \\) no es continua en \\( x = a \\), no puede ser derivable allí."
     },
     // 47
     {
@@ -669,7 +670,7 @@ let todasLasPreguntas = [
             "El teorema de Rolle."
         ],
         respuestaCorrecta: 0,
-        explicacion: "La segunda derivada nos indica la naturaleza del punto crítico."
+        explicacion: "El criterio de la segunda derivada ayuda a determinar la naturaleza de un punto crítico: si \\( f''(x) > 0 \\), es un mínimo local; si \\( f''(x) < 0 \\), es un máximo local."
     },
     // 48
     {
@@ -683,7 +684,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = -\\cosh(x) \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada del coseno hiperbólico es el seno hiperbólico."
+        explicacion: "La derivada del coseno hiperbólico es el seno hiperbólico: \\( \\dfrac{d}{dx} \\cosh(x) = \\sinh(x) \\)."
     },
     // 49
     {
@@ -697,7 +698,7 @@ let todasLasPreguntas = [
             "\\( f'(x) = -\\sinh(x) \\)"
         ],
         respuestaCorrecta: 0,
-        explicacion: "La derivada del seno hiperbólico es el coseno hiperbólico."
+        explicacion: "La derivada del seno hiperbólico es el coseno hiperbólico: \\( \\dfrac{d}{dx} \\sinh(x) = \\cosh(x) \\)."
     },
     // 50
     {
@@ -711,11 +712,11 @@ let todasLasPreguntas = [
             "No existe"
         ],
         respuestaCorrecta: 0,
-        explicacion: "Este límite notable vale 1."
+        explicacion: "Este es un límite notable cuyo valor es 1."
     }
 ];
 
-// Función para mezclar
+// Función para mezclar un array usando Fisher-Yates
 function mezclarArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -727,13 +728,13 @@ let preguntas; // Este arreglo contendrá las 20 preguntas seleccionadas aleator
 let indicePregunta = 0;
 let puntaje = 0;
 
+// Función para iniciar el juego
 function iniciarJuego() {
     document.getElementById('inicio').style.display = 'none';
     document.getElementById('juego').style.display = 'block';
     indicePregunta = 0;
     puntaje = 0;
 
-    
     preguntas = [...todasLasPreguntas];
     mezclarArray(preguntas);
     preguntas = preguntas.slice(0, 20);
@@ -741,6 +742,7 @@ function iniciarJuego() {
     mostrarPregunta();
 }
 
+// Función para mostrar una pregunta
 function mostrarPregunta() {
     let preguntaActual = preguntas[indicePregunta];
     document.getElementById('tituloTema').innerText = preguntaActual.tema;
@@ -768,6 +770,7 @@ function mostrarPregunta() {
     MathJax.typesetPromise();
 }
 
+// Función para verificar la respuesta seleccionada
 function verificarRespuesta() {
     let preguntaActual = preguntas[indicePregunta];
     let opciones = document.getElementsByName('opcion');
@@ -797,6 +800,7 @@ function verificarRespuesta() {
     MathJax.typesetPromise();
 }
 
+// Función para mostrar la siguiente pregunta
 function siguientePregunta() {
     indicePregunta++;
     if (indicePregunta < preguntas.length) {
@@ -810,6 +814,7 @@ function siguientePregunta() {
     }
 }
 
+// Función para mostrar una pregunta bonus
 function mostrarPreguntaBonus() {
     let preguntaBonus = {
         tema: "Pregunta Bonus",
@@ -830,21 +835,68 @@ function mostrarPreguntaBonus() {
     mostrarPregunta();
 }
 
+// Función para finalizar el juego
 function finalizarJuego() {
     document.getElementById('juego').style.display = 'none';
     document.getElementById('resultado').style.display = 'block';
     document.getElementById('puntajeFinal').innerText = `Obtuviste ${puntaje} de ${preguntas.length} respuestas correctas.`;
 }
 
+// Función para reiniciar el juego
 function reiniciarJuego() {
     document.getElementById('resultado').style.display = 'none';
     iniciarJuego();
 }
 
-function mostrarInstrucciones() {
-    alert("Instrucciones:\n- Responde 20 preguntas seleccionadas aleatoriamente de un total de 50.\n- Las opciones de respuesta se ordenan aleatoriamente cada vez.\n- Si respondes más de 15 preguntas correctamente, obtendrás una pregunta bonus.\n- Obtén retroalimentación inmediata después de cada respuesta.\n- Al final, revisa tu puntaje y accede a recursos adicionales.");
+// Función para reiniciar el nivel (reiniciar el juego)
+function reiniciarNivel() {
+    // Reiniciar las variables
+    indicePregunta = 0;
+    puntaje = 0;
+    preguntas = [...todasLasPreguntas];
+    mezclarArray(preguntas);
+    preguntas = preguntas.slice(0, 20);
+    document.getElementById('juego').style.display = 'block';
+    document.getElementById('resultado').style.display = 'none';
+    mostrarPregunta();
 }
 
+// Función para regresar al menú principal
+function regresarNivel() {
+    // Mostrar el menú de inicio y ocultar las demás secciones
+    document.getElementById('juego').style.display = 'none';
+    document.getElementById('resultado').style.display = 'none';
+    document.getElementById('inicio').style.display = 'block';
+}
+
+// Función para mostrar las instrucciones (ventana modal)
+function mostrarInstrucciones() {
+    document.getElementById('instrucciones').style.display = 'block';
+}
+
+// Función para ocultar las instrucciones
+function ocultarInstrucciones() {
+    document.getElementById('instrucciones').style.display = 'none';
+}
+
+// Función para mostrar los recursos (ventana modal)
 function mostrarRecursos() {
-    window.open('https://sites.google.com/pcpuma.acatlan.unam.mx/proyecto-final/p%C3%A1gina-principal?authuser=0', '_blank');
+    document.getElementById('recursos').style.display = 'block';
+}
+
+// Función para ocultar los recursos
+function ocultarRecursos() {
+    document.getElementById('recursos').style.display = 'none';
+}
+
+// Función para cerrar las ventanas modales al hacer clic fuera del contenido
+window.onclick = function(event) {
+    let instrucciones = document.getElementById('instrucciones');
+    let recursos = document.getElementById('recursos');
+    if (event.target == instrucciones) {
+        instrucciones.style.display = 'none';
+    }
+    if (event.target == recursos) {
+        recursos.style.display = 'none';
+    }
 }
